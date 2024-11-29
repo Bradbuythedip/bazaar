@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caelus Bazaar - Marketplace & Bounties</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">CAELUS</a>
+            <div class="nav-links">
+                <a href="gallery.html">Gallery</a>
+                <a href="bazaar.html" class="active">Bazaar</a>
+                <a href="initiative.html">Our Initiative</a>
+                <a href="team.html">Team</a>
+                <a href="profile.html">Profile</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="bazaar-container">
+        <section class="marketplace-section">
+            <h2>Marketplace</h2>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="shirts">Shirts</button>
+                <button class="filter-btn" data-filter="pants">Pants</button>
+                <button class="filter-btn" data-filter="dresses">Dresses</button>
+                <button class="filter-btn" data-filter="jackets">Jackets</button>
+            </div>
+
+            <div class="marketplace-grid">
+                <!-- Sample marketplace items -->
+                <div class="item-card" data-category="dresses">
+                    <img src="images/sample-dress.jpg" alt="Custom Dress">
+                    <div class="item-details">
+                        <h3>Sustainable Evening Dress</h3>
+                        <p>Hand-crafted from organic silk</p>
+                        <p class="price">$599</p>
+                        <button class="btn btn-primary">View Details</button>
+                    </div>
+                </div>
+                <!-- More items will be dynamically added -->
+            </div>
+        </section>
+
+        <section class="bounty-section">
+            <h2>Bounty Board</h2>
+            <div class="bounty-controls">
+                <button class="btn btn-primary" id="create-bounty-btn">Create New Bounty</button>
+            </div>
+
+            <div class="bounty-grid">
+                <!-- Sample bounty -->
+                <div class="bounty-card">
+                    <h3>Custom Wedding Dress</h3>
+                    <p>Looking for a designer to create a sustainable wedding dress using organic materials.</p>
+                    <div class="bounty-details">
+                        <span class="budget">Budget: $2000</span>
+                        <span class="deadline">Deadline: 2 months</span>
+                    </div>
+                    <button class="btn btn-primary">Submit Proposal</button>
+                </div>
+                <!-- More bounties will be dynamically added -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Create Bounty Modal -->
+    <div class="modal" id="bounty-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Create New Bounty</h2>
+            <form id="bounty-form">
+                <div class="form-group">
+                    <label for="bounty-title">Title</label>
+                    <input type="text" id="bounty-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="bounty-description">Description</label>
+                    <textarea id="bounty-description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="bounty-budget">Budget</label>
+                    <input type="number" id="bounty-budget" required min="1">
+                </div>
+                <div class="form-group">
+                    <label for="bounty-deadline">Deadline</label>
+                    <input type="date" id="bounty-deadline" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Bounty</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Caelus</h3>
+                <p>Promoting sustainable and custom-made fashion through innovation and community.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="gallery.html">Fabric Gallery</a></li>
+                    <li><a href="bazaar.html">Marketplace</a></li>
+                    <li><a href="initiative.html">Sustainability Initiative</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
